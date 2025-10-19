@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pidisplaysim", "oleddisplaysim\oleddisplaysim.vcxproj", "{75063DD1-A26E-4FF2-94C1-0D32AF4DCE11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75063DD1-A26E-4FF2-94C1-0D32AF4DCE11}.Debug|x86.ActiveCfg = Debug|Win32
+		{75063DD1-A26E-4FF2-94C1-0D32AF4DCE11}.Debug|x86.Build.0 = Debug|Win32
+		{75063DD1-A26E-4FF2-94C1-0D32AF4DCE11}.Release|x86.ActiveCfg = Release|Win32
+		{75063DD1-A26E-4FF2-94C1-0D32AF4DCE11}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {896F7081-0B81-486E-8A9C-4D03FC72646A}
+	EndGlobalSection
+EndGlobal

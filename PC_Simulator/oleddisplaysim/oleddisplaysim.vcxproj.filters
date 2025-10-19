@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Pi_code">
+      <UniqueIdentifier>{75c36768-20c9-46fb-9d71-1f496efe46d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PC_code">
+      <UniqueIdentifier>{9e3d9791-a5d4-4e45-91b0-7dbc78e659dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PI_Code">
+      <UniqueIdentifier>{74bba2d6-e8fe-49f5-b509-ca8dfeb29c9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PC_Code">
+      <UniqueIdentifier>{8220982a-fc46-406a-8cef-ac53e3713f52}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files\PC_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files\PC_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_threads.h">
+      <Filter>Header Files\PC_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_peripheral_stubs.h">
+      <Filter>Header Files\PC_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_or_rp2040.h">
+      <Filter>Header Files\PC_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="oleddisplaysim.h">
+      <Filter>Header Files\PC_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files\PC_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\App\app_audio.h">
+      <Filter>Header Files\PI_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\App\app_demo.h">
+      <Filter>Header Files\PI_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\App\App_global_utils.h">
+      <Filter>Header Files\PI_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\App\App_inputs.h">
+      <Filter>Header Files\PI_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\App\App_main.h">
+      <Filter>Header Files\PI_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\App\App_polygons_fpu.h">
+      <Filter>Header Files\PI_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\App\App_Shapes.h">
+      <Filter>Header Files\PI_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\App\App_Trigtables.h">
+      <Filter>Header Files\PI_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\App\App_videomodes.h">
+      <Filter>Header Files\PI_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\App\hxcmod.h">
+      <Filter>Header Files\PI_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\App\pc_or_rp2040.h">
+      <Filter>Header Files\PI_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\App\App_simple.h">
+      <Filter>Header Files\PI_Code</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\App\App_audio.cpp">
+      <Filter>Source Files\Pi_code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\App\app_global_utils.cpp">
+      <Filter>Source Files\Pi_code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\App\App_inputs.cpp">
+      <Filter>Source Files\Pi_code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\App\App_main.cpp">
+      <Filter>Source Files\Pi_code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\App\App_polygons_fpu.cpp">
+      <Filter>Source Files\Pi_code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\App\App_Shapes.cpp">
+      <Filter>Source Files\Pi_code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\App\app_trigtables.cpp">
+      <Filter>Source Files\Pi_code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\App\glcdfont.cpp">
+      <Filter>Source Files\Pi_code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\App\hxcmod.c">
+      <Filter>Source Files\Pi_code</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_audio.cpp">
+      <Filter>Source Files\PC_code</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_bitmap_to_text.cpp">
+      <Filter>Source Files\PC_code</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_ioSimulator.cpp">
+      <Filter>Source Files\PC_code</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_peripheral_stubs.cpp">
+      <Filter>Source Files\PC_code</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_threads.cpp">
+      <Filter>Source Files\PC_code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\App\App_simple.cpp">
+      <Filter>Source Files\Pi_code</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="oleddisplaysim.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="oleddisplaysim.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

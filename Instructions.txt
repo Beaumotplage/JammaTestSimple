@@ -1,0 +1,27 @@
+RP2350 to JAMMA
+---------------
+
+There are two ways to build the code.
+1. VScode to build the RP2350 firmware, resulting in a .uf2 file you can load onto the CPU
+2. Visual Studio community project that will spoof the HAL of the RP2350, allowing you to test your code on a PC (via keyboard and a bitmap sim of the CRT display.
+
+
+VSCODE
+Install VScode (free)
+Go to extensions on the left side and search for the Raspberry Pi Pico extensions.
+Once this is installed, open the root folder.
+
+
+Visual Studio community.
+Go to the pc_simulator folder and open the .sln file.
+Make sure the build is always set to x86 (not 64-bit, that will crash) and try release or debug and the sim should load up.
+
+It's up to you to keep both projects in-sync. They share the same .app folder, but if you add files to one, you need to add them to the other. VScode and Visual Studio have different build rules, so you might find something needs tweaking to build in both.
+Keep to integers or 32-bit floats ('float' and 1.0f) or you will murder the runtime of the RP2350.
+
+
+
+RP2350 Testcard operation.
+To load in new firmware, attach USBC lead to the PC. Power up the card (via JAMMMA) while holding the 'BOOTSEL' button and it will appear as a removable drive. 
+Drop the .uf2 file onto it to load new firmware. The .uf2 is in the build folder of the Pico project.
+

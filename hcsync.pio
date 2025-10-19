@@ -1,0 +1,79 @@
+;
+; John Bennett
+; Csync combiner
+; Adds HSYNC onto VSYNC
+
+; Program name
+.program csync
+
+ 
+    pull block              ; Pull from FIFO to OSR (only happens once)
+
+.wrap_target            ; Program wraps to here
+
+start:
+
+; ACTIVE + FRONTPORCH
+
+    mov x, osr              ; Copy value from OSR to x scratch register
+
+activeporch:
+
+    jmp x-- activeporch      ; Remain high in active mode and front porch
+
+    set pins, 0 [5] ; SYNC PULSE   
+
+    jmp pin positive        ; Read in Vsync pin state
+
+negative:
+
+  ;  set pins, 0 [6]  ; SYNC PULSE 
+
+     set pins, 0 [1] ;BACKPORCH
+    jmp endish
+
+positive:
+    set pins, 1 [1] ; BACKPORCH
+
+endish:
+    irq 0    ; Set IRQ to signal end of H line (47 cycles)
+.wrap
+
+
+
+
+% c-sdk {
+static inline void csync_program_init(PIO pio, uint sm, uint offset, uint inpin, uint outpin) {
+
+    // creates state machine configuration object c, sets
+    // to default configurations. I believe this function is auto-generated
+    // and gets a name of <program name>_program_get_default_config
+    // Yes, page 40 of SDK guide
+    pio_sm_config c = csync_program_get_default_config(offset);
+
+    // Map the state machine's SET pin group to one pin, namely the `pin`
+    // parameter to this function.
+    sm_config_set_set_pins(&c, inpin, 1);
+    sm_config_set_out_pins(&c, outpin, 1);
+
+    // Set clock division (div by 5 for 25 MHz state machine)
+    sm_config_set_clkdiv(&c, 160) ; 
+
+    // Set this pin's GPIO function (connect PIO to the pad)
+    pio_gpio_init(pio, inpin);
+    pio_gpio_init(pio, outpin);
+
+    sm_config_set_jmp_pin(&c, inpin);
+    
+    // Set the pin direction to output at the PIO
+    pio_sm_set_consecutive_pindirs(pio, sm, inpin, 1, false); //1 inputs
+    pio_sm_set_consecutive_pindirs(pio, sm, outpin, 1, true);  //1 output
+    
+
+    // Load our configuration, and jump to the start of the program
+    pio_sm_init(pio, sm, offset, &c);
+
+    // Set the state machine running (commented out so can be synchronized w/ vsync)
+     pio_sm_set_enabled(pio, sm, true);
+}
+%}
